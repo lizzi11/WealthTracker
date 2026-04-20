@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <ImageView
+            android:id="@+id/ed_li_iv_header"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/portfolio"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="Portfolio illustration" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/ed_li_card_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeColor="@color/accent_tan"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/ed_li_iv_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wealth Tracker"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/brown_dark"
+                    android:layout_marginBottom="24dp"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ed_li_til_income"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Monthly Income"
+                    app:boxStrokeColor="@color/brown_primary"
+                    app:hintTextColor="@color/brown_primary"
+                    app:startIconDrawable="@drawable/outline_add_24"
+                    app:startIconTint="@color/brown_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_li_et_income"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_main"
+                        android:paddingStart="48dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/ed_li_til_expenses"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:hint="Monthly Expenses"
+                    app:boxStrokeColor="@color/brown_primary"
+                    app:hintTextColor="@color/brown_primary"
+                    app:startIconDrawable="@drawable/money"
+                    app:startIconTint="@color/brown_primary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed_li_et_expenses"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/text_main"
+                        android:paddingStart="48dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ed_li_btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Calculate Savings"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:backgroundTint="@color/brown_primary"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
